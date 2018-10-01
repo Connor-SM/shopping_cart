@@ -1,3 +1,7 @@
+// global cart variable
+// TODO: replace with cloud database
+let cart = [];
+
 $.get('./components/header.html', function(r) {
   $("#nav").html(r);
 });
@@ -40,5 +44,19 @@ $.get('./assets/products.json', showProducts);
 
 // TODO: add functionality later
 function addToCart(id) {
-  console.log(id);
+  $.get('./assets/products.json', function(res) {
+    let products = res.products;
+
+    // loop through products array to find correct id
+    for (let i = 0; i < products.length; i++) {
+      // check current product id to id parameter passed
+      if (products[i].id == id) {
+        // add product to global cart
+        cart.push(products[i]);
+        break;
+      }
+    }
+  });
+
+  console.log(cart);
 }
