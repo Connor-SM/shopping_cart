@@ -2,6 +2,12 @@
 // TODO: replace with cloud database
 let cart = [];
 
+// if cart is empty don't show cart
+if (cart.length === 0) {
+  $("#cart").css("display", "none");
+}
+
+
 $.get('./components/header.html', function(r) {
   $("#nav").html(r);
 });
@@ -66,6 +72,13 @@ function addToCart(id) {
 
 
 function showCart() {
+  // if cart is empty don't show, otherwise show
+  if (cart.length === 0) {
+    $("#cart").css("display", "none");
+  } else {
+    $("#cart").css("display", "block");
+  }
+
   // define html variable to be inserted to tbody
   let html = "";
 
