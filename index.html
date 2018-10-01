@@ -13,6 +13,51 @@
   <body>
     <header id="nav"></header>
 
+    <div class="container">
+      <div class="row">
+        <!-- Cols for product cards -->
+        <div class="col-md-9">
+          <div class="row">
+            <div id="products" class="col-md-12">
+              <div class="card col-md-4">
+                <div class="card-img-top">
+                  <img src="http://placehold.it/1x1" alt="Placeholder" class="card-img" />
+                </div>
+                <div class="card-title">Title</div>
+                <div class="card-subtitle">$4.99</div>
+                <div class="card-text">This is a description.</div>
+                <button class="btn btn-primary">Add To Cart</button>
+              </div> <!-- End of card -->
+              <div class="card col-md-4">
+                <div class="card-img-top">
+                  <img src="http://placehold.it/1x1" alt="Placeholder" class="card-img" />
+                </div>
+                <div class="card-title">Title</div>
+                <div class="card-subtitle">$4.99</div>
+                <div class="card-text">This is a description.</div>
+                <button class="btn btn-primary">Add To Cart</button>
+              </div> <!-- End of card -->
+            </div> <!-- End of col-12 -->
+          </div> <!-- End of row -->
+        </div> <!-- End of col-9 -->
+
+        <!-- Cols for cart -->
+        <div id="cart" class="col-md-3">
+          <table class="table">
+            <thead id="table-head">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Product</th>
+                <th scope="col">Price</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+        </div> <!-- Ends col-3 for cart -->
+      </div> <!-- Ends row -->
+    </div> <!-- Ends container -->
+
 
 
     <!-- jQuery CDN -->

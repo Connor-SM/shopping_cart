@@ -1,0 +1,26 @@
+.card {
+  margin: 50px 15px;
+}
+
+.card-img {
+  display: block;
+  margin: 25px auto;
+}
+
+.btn-primary {
+  margin: 25px auto;
+  width: 50%;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-subtitle {
+  font-style: italic;
+}
+
+.table {
+  margin-top: 50px;
+  width: 100%;
+}
