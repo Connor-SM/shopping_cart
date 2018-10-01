@@ -10,6 +10,10 @@ function showProducts(response) {
 
   // loop through products and create card for each
   for (let i = 0; i < products.length; i++) {
+    // open row for each third product
+    if (i % 3 == 0) {
+      html += '<div class="row">';
+    }
     html += `
       <div class="card col-md-4">
         <div class="card-img-top">
@@ -21,6 +25,10 @@ function showProducts(response) {
         <button onclick="addToCart(${products[i].id})" class="btn btn-primary">Add To Cart</button>
       </div> <!-- End of card -->
     `;
+    // close row after 3 products have been added
+    if ((i + 1) % 3 == 0) {
+      html += '</div>';
+    }
   }
   // inject html string into products id
   $("#products").html(html);
